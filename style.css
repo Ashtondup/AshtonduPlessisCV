@@ -1,273 +1,198 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body
-{
-    background: #f9f9f9;
+body {
+    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-.container
-{
+.container {
     position: relative;
     width: 100%;
     max-width: 1000px;
+    min-height: 1000px;
     background: #fff;
     margin: 50px;
-    box-shadow: 0 50px 75px rgba(0, 0, 0, 1);
-    border-left: 50px solid #fff;
-    border-right: 50px solid #fff;
-}
-
-.container .top
-{
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    box-shadow: 0 15px 55px #213F99;
+}
+
+.container .Left_Side {
+    position: relative;
+    background: #4a2841;
     padding: 40px;
-    padding-bottom: 0;
 }
 
-.container .top .imgBx
-{
+.profileText {
     position: relative;
-    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.container .top .imgBx .box
-{
+.contactInfo {
+    padding-top: 40px;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo h5 {
+    color: white;
+}
+.contactInfo ul {
     position: relative;
-    width: 70%;
-    min-width: 200%;
-    border-radius: 50%;
-    overflow: hidden;
-    aspect-ratio: 1;
 }
 
-.container .top .imgBx .box img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 15px;
+    color: #3c79ac;
+}
+
+.contactInfo ul li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.profileText .imgBx img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
-.container .top .profileText
-{
-    position: relative;
-    padding: 40%;
-    display: flex;
-    align-items: center;
-}
-
-.container .top .profileText h3
-{
-    font-size: 3em;
-    letter-spacing: 0.1em;
-    line-height: 1.2em;
-    font-weight: 600;
-    color: #333;
-}
-
-.container .top .profileText h3 span
-{
-    position: relative;
-    font-size: 0.5em;
-    font-weight: 300;
-    top: -10px;
-}
-
-.container .contentBox
-{
-    position: relative;
-    min-height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 0 40px 40px;
-}
-
-.container .contentBox h3
-{
-    border-left: 4px solid #ff8bb3;
-    padding-left: 10px;
-    line-height: 1em;
-    font-weight: 600;
-    color: #333;
-    letter-spacing: 0.1em;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-
-.container .contentBox ul
-{
-    position: relative;
-    margin: 10px 0;
-}
-
-.container .contentBox ul li
-{
-    list-style: none;
-    margin: 25px 0;
-    line-height:  1em;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-}
-
-.container .contentBox ul li ion-icon
-{
-    font-size: 1.2em;
-    margin-right: 10px;
-    color: #3590d2;
-}
-
-.container .contentBox ul.education li
-{
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-h5
-{
-    color: #3590d2;
-}
-
-h4
-{
-    color: #333;
-    font-weight: 500;
-    margin: 5px 0;
-}
-
-h6
-{
-    color: #666;
-    font-weight: 300;
-    font-size: 1em;
-}
-
-.language li
-{
-    flex-direction: column;
-}
-
-.language li span
-{
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.language .percent
-{
-    position: relative;
-    width: 100%;
-    background: #e3e3e3;
-    height: 6px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    display: block;
+.profileText .imgBx {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
-.language .percent div
-{
+.profileText h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo.education li {
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h5 {
+    color: #3c79ac;
+    font-weight: 500;
+}
+
+.contactInfo.education li h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contactInfo.education li h4 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.contactInfo.language .percent {
     position: relative;
+    width: 100%;
+    height: 6px;
+    background: black;
+    display: block;
+    margin-top: 5px;
+}
+
+.contactInfo.language .percent div {
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background: #3590d2;
+    background: #E1B0AC;
 }
 
-.container .contentBox ul.interest
-{
+.container .Right_Side {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    padding: 40px;
 }
 
-.container .contentBox ul.interest li
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+.about {
+    margin-bottom: 50px;
 }
 
-.container .contentBox ul.interest li .icon
-{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: #3590d2;
-    color: #fff;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about:last-child {
+    margin-bottom: 0;
 }
 
-.container .contentBox ul.interest li .icon ion-icon
-{
-    color: #fff;
-    margin-right: 0;
-}
-
-p
-{
-    font-size: 300;
-}
-
-.rightSide
-{
-    padding-left: 40px;
-}
-
-.about .box
-{
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0;
-}
-
-.about .box .year_company
-{
-    min-height: 150px;
+.title2 {
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-.about .box .year_company h5
-{
+p {
     color: #333;
+}
+
+.about .box {
+    display: flex;
+    flex-direction: column; /* Change to column to stack skill bars */
+    margin: 20px 0; /* Adjust margin for even spacing */
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-size: 20px;
     font-weight: 600;
 }
 
-.about .box .year_company h5:nth-child(1)
-{
-    color: #3590d2;
-}
-
-.about .box .text h4
-{
-    color: #3590d2;
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #3c79ac;
     font-size: 16px;
-    margin: 0;
 }
 
-.about.skills .box
-{
+.skills .box {
     position: relative;
     width: 100%;
     display: grid;
@@ -276,26 +201,123 @@ p
     align-items: center;
 }
 
-.about.skills .box h4
-{
-    color: #333;
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
     font-weight: 500;
-    margin-bottom: 5px;
 }
 
-.about.skills .box .percent
-{
+.skills .box .percent {
     position: relative;
     width: 100%;
     height: 10px;
-    background: #e3e3e3;
+    background: grey;
 }
 
-.about.skills .box .percent div
-{
+.skills .box .percent div {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background: #3590d2;
+    background: #E1B0AC;
+}
+.interest ul 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li 
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa
+{
+    color: #3c79ac;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media(max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px)
+{
+    .about .box
+    {
+        flex-direction: column;
+    }
+    .about .box .year_company
+    {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .interest ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+a {
+    color: #FFF; /* White color for hyperlinks */
+    text-decoration: underline; /* Optional: Remove underline */
+    font-size: 12px;
+}
+
+/* Style for the hyperlink when hovered */
+a:hover {
+    color: #FFF; /* Change color on hover, replace '#CCC' with your desired hover color */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal p{
+    font-size: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
 }
